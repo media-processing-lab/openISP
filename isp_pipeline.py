@@ -171,7 +171,7 @@ with f:
             ee_emclip[1] = int(value) if 'emclip_max' in str(parameter) else ee_emclip[1]
         elif 'fcs' in str(parameter):
             fcs_edge[0] = int(value) if 'edge_min' in str(parameter) else fcs_edge[0]
-            fcs_edge[1] = int(value) if 'edge_min' in str(parameter) else fcs_edge[1]
+            fcs_edge[1] = int(value) if 'edge_max' in str(parameter) else fcs_edge[1]
             fcs_gain = int(value) if '_gain' in str(parameter) else fcs_gain
             fcs_intercept = int(value) if '_intercept' in str(parameter) else fcs_intercept
             fcs_slope = int(value) if '_slope' in str(parameter) else fcs_slope
