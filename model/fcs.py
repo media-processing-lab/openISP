@@ -29,6 +29,6 @@ class FCS:
                     uvgain = self.intercept - self.slope * self.edgemap[y,x]
                 else:
                     uvgain = 0
-                fcs_img[y,x,:] = uvgain * (self.img[y,x,:]) / 256 + 128
+                fcs_img[y,x,:] = uvgain * (self.img[y,x,:].astype(float)) / 256 + 128
         self.img = fcs_img
         return self.clipping()
